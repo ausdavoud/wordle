@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Wordle — CS Edition (Plain HTML/CSS/JS)</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Small safety: if external CSS fails, basic styling still applies */
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Wordle — CS Edition</h1>
+      <p class="subtitle">Guess the 5-letter CS word. 6 tries.</p>
+
+      <div id="game">
+        <div id="board" aria-live="polite"></div>
+        <div id="keyboard"></div>
+      </div>
+
+      <div id="message" role="status" aria-live="polite"></div>
+
+      <div class="controls">
+        <button id="newGame">New Game</button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
