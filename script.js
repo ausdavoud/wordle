@@ -65,7 +65,7 @@ const WORDS = [
   "exclusively", "immense", "rigid", "sufficiently", "lit", "mainstream", 
   "multimodal", "onslaught", "palm", "pioneering", "poised to shake up", 
   "seniors", "sight", "skyline", "skyscraper", "sprung up", "tendency", "toss", 
-  "traditional", "treat", "up to now", "vision", "volcano", "хегох", "accurate", 
+  "traditional", "treat", "up to now", "vision", "volcano", "xerox", "accurate", 
   "dim", "dominant", "dormant", "drab", "gigantic", "lasting", "selective", 
   "vibrant", "Accounting", "Afford", "Approach", "Attractive option", 
   "Band width", "Battling", "Bursting point", "Barrier", "Camping", "Coastline", 
@@ -88,8 +88,8 @@ const WORDS = [
   "enact", "erratic", "exaggerate", "exhaust", "facet", "feign", "indiscriminate"
 ];
 
-// Ensure words are lowercase and 5 letters
-const DICTIONARY = WORDS.filter(w => w && w.length === 5).map(w => w.toLowerCase());
+// Keep only plain five-letter words (a-z), lowercased
+const DICTIONARY = WORDS.map(w => w.toLowerCase()).filter(w => /^[a-z]{5}$/.test(w));
 
 const ROWS = 6, COLS = 5;
 let secret = '';

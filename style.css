@@ -34,5 +34,15 @@ h1{margin:0 0 8px;font-weight:700}
 button{font-weight:700;padding:8px 12px;border-radius:6px;border:none;cursor:pointer}
 
 @media (max-width:520px){
+  body{padding:16px 12px}
   .tile{width:48px;height:48px;font-size:24px}
+  /* let the keys share the row instead of overflowing the screen */
+  #keyboard{width:100%}
+  .keyrow{gap:4px}
+  .keyrow:nth-child(2){padding:0 5%}
+  .key{flex:1 1 0;min-width:0;padding:14px 0;font-size:13px}
+  .key.wide{flex:1.5 1 0;min-width:0;padding:14px 0;font-size:11px}
+}
+@media (max-width:350px){
+  .key.wide{font-size:9px}
 }
